@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #fff;
   background: url("background.jpg.webp") no-repeat center center;
   background-size: cover;
   background-attachment: scroll;
@@ -25,10 +25,16 @@ header, nav, main, footer {
   z-index: 1;
 }
 
-header, footer {
+header {
   background-color: #0d47a1;
   color: white;
-  padding: 20px;
+  padding: 10px 20px;
+}
+
+footer {
+  background-color: #0d47a1;
+  color: white;
+  padding: 15px 20px;
   text-align: center;
 }
 
@@ -47,6 +53,11 @@ nav a {
 
 main {
   padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  color: white;
 }
 
 /* АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ И ПЛАНШЕТОВ */
@@ -65,7 +76,7 @@ main {
   }
 
   header, footer {
-    padding: 15px 10px;
+    padding: 10px 10px;
     font-size: 16px;
   }
 
@@ -86,7 +97,8 @@ main {
 
 .logo h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 20px;
+  text-align: left;
 }
 
 .phone-header {
@@ -111,7 +123,8 @@ main {
   }
 
   .logo h1 {
-    font-size: 20px;
+    font-size: 18px;
+    text-align: center;
   }
 
   .phone-header {
