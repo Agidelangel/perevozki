@@ -3,8 +3,9 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-  background: url("background.jpg.webp") no-repeat center center fixed;
-  background-size: cover;
+  background: url("background.jpg.webp") no-repeat center center;
+background-size: cover;
+background-attachment: scroll;
 }
 
 /* Стиль полупрозрачного тумана — добавляется на всех страницах кроме index.html */
