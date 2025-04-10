@@ -24,14 +24,16 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1200px;
+      max-width: 1400px;
       margin: auto;
       padding: 10px 20px;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      gap: 20px;
     }
     .logo {
       flex: 1;
       text-align: left;
+      white-space: nowrap;
     }
     .logo h1 {
       font-size: 35px;
@@ -47,22 +49,25 @@
       align-items: center;
       justify-content: space-between;
       flex: 3;
+      gap: 20px;
     }
     nav {
       display: flex;
-      gap: 35px;
+      gap: 25px;
       justify-content: center;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       flex: 2;
     }
     nav a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
+      white-space: nowrap;
     }
     .phones {
       text-align: right;
       min-width: 160px;
+      white-space: nowrap;
     }
     .phones a {
       display: block;
@@ -162,7 +167,7 @@
         <span>Перевезем, доставим быстро</span>
       </div>
       <div class="nav-phones">
-        <nav class="">
+        <nav>
           <a href="index.html">Главная</a>
           <a href="uslugi.html">Услуги</a>
           <a href="ceny.html">Цены</a>
