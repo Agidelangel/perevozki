@@ -1,25 +1,90 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <title>Главная</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Грузоперевозки Днепр</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('background.jpg.webp') center center/cover no-repeat;
+      color: #fff;
+    }
+    header {
+      background: rgba(13, 71, 161, 0.95);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    .logo h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero-content {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 10px;
+    }
+    .hero h1 {
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+    .btn {
+      background-color: #1565c0;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 24px; }
+      .btn { padding: 8px 16px; font-size: 14px; }
+      nav { display: flex; flex-direction: column; align-items: flex-end; }
+      nav a { margin: 5px 0 0 0; }
+    }
+  </style>
 </head>
 <body>
-  <header><h1>Главная</h1></header>
-  
-<nav>
-  <a href="index.html">Главная</a>
-  <a href="uslugi.html">Услуги</a>
-  <a href="ceny.html">Цены</a>
-  <a href="transport.html">Транспорт</a>
-  <a href="contacts.html">Контакты</a>
-  <a href="about.html">О нас</a>
-  <a href="articles.html">Статьи</a>
-</nav>
+  <header>
+    <div class="logo"><h1>Перевозки Днепр</h1></div>
+    <nav>
+      <a href="#about">О нас</a>
+      <a href="#services">Услуги</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
 
-  <main><h2>Добро пожаловать на сайт грузоперевозок в Днепре!</h2><p>Профессиональные услуги по перевозке мебели, товаров и пассажиров по Днепру и области.</p></main>
-  <footer>&copy; 2025 Перевозки Днепр</footer>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Переезды и грузоперевозки по Днепру</h1>
+      <p>Надежно, оперативно, профессионально</p>
+      <a href="#about" class="btn">Подробнее</a>
+    </div>
+  </section>
+
 </body>
 </html>
