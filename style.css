@@ -7,6 +7,23 @@ body {
   background-size: cover;
 }
 
+/* Стиль полупрозрачного тумана — добавляется на всех страницах кроме index.html */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 0;
+}
+
+/* Чтобы всё остальное было поверх overlay */
+header, nav, main, footer {
+  position: relative;
+  z-index: 1;
+}
+
 header, footer {
   background-color: #0d47a1;
   color: white;
@@ -31,17 +48,3 @@ main {
   padding: 20px;
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
-  z-index: 0;
-}
-
-header, nav, main, footer {
-  position: relative;
-  z-index: 1;
-}
