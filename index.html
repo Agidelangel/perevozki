@@ -1,198 +1,69 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Грузоперевозки в Днепре — Переезды, доставка, услуги грузчиков 24/7</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('background.jpg.webp') center center/cover no-repeat;
-      color: #fff;
-    }
-    header {
-      background: rgba(13, 71, 161, 0.95);
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-    }
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1400px;
-      margin: auto;
-      padding: 10px 20px;
-      flex-wrap: nowrap;
-      gap: 20px;
-    }
-    .logo {
-      flex: 1;
-      text-align: left;
-      white-space: nowrap;
-    }
-    .logo h1 {
-      font-size: 35px;
-      margin: 0;
-    }
-    .logo span {
-      display: block;
-      font-size: 14px;
-      color: #cfe3fc;
-    }
-    .nav-phones {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex: 3;
-      gap: 20px;
-    }
-    nav {
-      display: flex;
-      gap: 25px;
-      justify-content: center;
-      flex-wrap: nowrap;
-      flex: 2;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      white-space: nowrap;
-    }
-    .phones {
-      text-align: right;
-      min-width: 160px;
-      white-space: nowrap;
-    }
-    .phones a {
-      display: block;
-      color: #fff;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-    }
-    .hero {
-      padding-top: 100px;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 0 20px;
-      box-sizing: border-box;
-    }
-    .hero-content {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 40px 20px;
-      border-radius: 10px;
-      max-width: 600px;
-      width: 100%;
-    }
-    .hero h1 {
-      margin-bottom: 10px;
-      font-size: 32px;
-    }
-    .btn {
-      background-color: #1565c0;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 15px;
-    }
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 24px;
-      color: white;
-    }
-    @media (max-width: 768px) {
-      .header-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 8px 10px;
-      }
-      .logo {
-        text-align: center;
-      }
-      .logo h1 {
-        font-size: 39px;
-      }
-      .logo span {
-        font-size: 16px;
-      }
-      .nav-phones {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-      }
-      nav {
-        flex-direction: column;
-        align-items: center;
-        display: none;
-        width: 100%;
-        padding: 10px 0;
-      }
-      nav.active {
-        display: flex;
-      }
-      .phones {
-        text-align: center;
-        margin: 10px 0;
-        font-size: 18px;
-        background: none;
-      }
-      .phones a {
-        font-size: 20px;
-      }
-      .menu-toggle {
-        display: block;
-        margin-top: 10px;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <title>Главная</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="home">
+  <div class="overlay"></div>
   <header>
     <div class="header-container">
       <div class="logo">
         <h1>Perevozki</h1>
-        <span>Перевезем, доставим быстро</span>
+        <p>Перевезем, доставим быстро</p>
       </div>
-      <div class="nav-phones">
-        <nav>
-          <a href="index.html">Главная</a>
-          <a href="uslugi.html">Услуги</a>
-          <a href="ceny.html">Цены</a>
-          <a href="transport.html">Транспорт</a>
-          <a href="contacts.html">Контакты</a>
-          <a href="about.html">О нас</a>
-          <a href="articles.html">Статьи</a>
-        </nav>
-        <div class="phones">
-          <a href="tel:+380965387558">+38 (096) 538 75 58</a>
-          <a href="tel:+380953275120">+38 (095) 327 51 20</a>
-        </div>
+      <div class="phone-header">
+        <a href="tel:+380965387558">📞 +38 (096) 538 75 58</a>
+        <a href="tel:+380953275120">📞 +38 (095) 327 51 20</a>
       </div>
-      <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')">☰</button>
     </div>
   </header>
-
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Переезды и грузоперевозки по Днепру</h1>
-      <p>Надежно, оперативно, профессионально</p>
-      <a href="#about" class="btn">Подробнее</a>
-    </div>
-  </section>
-
+  <nav>
+    <ul class="main-menu">
+      <li><a href="index.html">Главная</a></li>
+      <li class="submenu">
+        <a href="uslugi.html">Услуги ▾</a>
+        <ul class="dropdown">
+          <li><a href="gruzoperevozki.html"><strong>Грузоперевозки</strong></a></li>
+          <li><a href="perevozki-dnepr.html">По Днепру и области</a></li>
+          <li><a href="mezhgorod.html">Междугородние</a></li>
+          <li><a href="gruzovoe-taksi.html">Грузовое такси</a></li>
+          <li><a href="stroymaterialy.html">Стройматериалы</a></li>
+          <li><a href="oborudovanie.html">Оборудование</a></li>
+          <li><a href="spectransport.html">Спецтранспорт</a></li>
+          <li><a href="pereezdy.html"><strong>Переезды</strong></a></li>
+          <li><a href="kvartira.html">Квартирный</a></li>
+          <li><a href="dacha.html">Дачный</a></li>
+          <li><a href="ofisnyy-pereezd.html">Офисный</a></li>
+          <li><a href="bank.html">Отделения банков</a></li>
+          <li><a href="kafe-restoran.html">Кафе и рестораны</a></li>
+          <li><a href="service.html"><strong>Сервис</strong></a></li>
+          <li><a href="gruzchiki.html">Грузчики</a></li>
+          <li><a href="pogruzchik.html">Погрузчик</a></li>
+          <li><a href="evakuator.html">Эвакуатор</a></li>
+          <li><a href="musor.html">Вывоз мусора</a></li>
+          <li><a href="dostavka.html"><strong>Доставка</strong></a></li>
+          <li><a href="tovary.html">Товары</a></li>
+          <li><a href="gipermarket.html">Из гипермаркетов</a></li>
+          <li><a href="produkty.html">Продукты</a></li>
+          <li><a href="kurier.html">Курьерская</a></li>
+          <li><a href="passazhirskie.html"><strong>Пассажирские</strong></a></li>
+          <li><a href="passazhirskie.html">Пассажирские перевозки</a></li>
+          <li><a href="family.html">Семейные поездки</a></li>
+          <li><a href="pets.html">Перевозка животных</a></li>
+          <li><a href="transfer.html">Частный трансфер</a></li>
+        </ul>
+      </li>
+      <li><a href="ceny.html">Цены</a></li>
+      <li><a href="transport.html">Транспорт</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="about.html">О нас</a></li>
+      <li><a href="articles.html">Статьи</a></li>
+    </ul>
+  </nav>
+  <main><h1>Главная</h1><p>Контент в разработке...</p></main>
+  <footer>&copy; 2025 Перевозки Днепр</footer>
 </body>
 </html>
