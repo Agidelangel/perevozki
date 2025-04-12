@@ -1,6 +1,124 @@
+/* ==== ОБЩИЕ СТИЛИ ==== */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #222;
+  font-size: 18px;
+}
+
+a {
+  color: #004aad;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #333;
+}
+
+.phone-header a {
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* ==== МЕНЮ ==== */
+nav {
+  background-color: #222;
+  padding: 10px 0;
+}
+
+.main-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main-menu > li {
+  position: relative;
+  margin: 0 15px;
+}
+
+.main-menu a {
+  color: white;
+  padding: 8px 12px;
+  display: block;
+}
+
+.main-menu a:hover {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+.submenu:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  background-color: #333;
+  padding: 10px 0;
+  min-width: 220px;
+  z-index: 10;
+}
+
+.dropdown li {
+  margin: 0;
+}
+
+.dropdown a {
+  padding: 8px 16px;
+  color: #fff;
+}
+
+.dropdown a:hover {
+  background-color: #555;
+}
+
+/* ==== ОСНОВНОЙ КОНТЕНТ ==== */
+main {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==== ФУТЕР ==== */
+footer {
+  background-color: #f4f4f4;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-top: 40px;
+}
+
+/* ==== МЕДИА ЗАПРОСЫ ==== */
 @media (max-width: 768px) {
   .hero {
-    padding-top: 180px !important; /* 💥 только на телефонах */
+    padding-top: 180px !important;
   }
 
   .header-container {
@@ -35,15 +153,20 @@
   .phone-header a {
     font-size: 16px;
     margin: 2px 0;
+    display: block;
   }
 
   nav {
     padding: 5px 0;
   }
 
-  nav a {
-    display: block;
-    margin: 6px 0;
+  .main-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdown {
+    position: static;
   }
 
   main {
