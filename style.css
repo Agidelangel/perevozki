@@ -1,13 +1,7 @@
 .hero {
-  padding-top: 140px;
+  margin-top: 170px;
 }
 
-/* Для Safari и похожих браузеров */
-@supports (-webkit-touch-callout: none) {
-  .hero {
-    padding-top: 160px;
-  }
-}
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
