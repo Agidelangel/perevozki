@@ -8,49 +8,124 @@ body {
   background-attachment: scroll;
 }
 
-/* Стиль полупрозрачного тумана — добавляется на всех страницах кроме index.html */
-.overlay {
+/* Туманный фон для остальных страниц */
+body:not(.home)::before {
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  backdrop-filter: blur(6px);
   background-color: rgba(255, 255, 255, 0.7);
   z-index: 0;
 }
 
-/* Чтобы всё остальное было поверх overlay */
 header, nav, main, footer {
   position: relative;
   z-index: 1;
 }
 
+/* Хедер */
 header {
   background-color: #0d47a1;
   color: white;
-  padding: 10px 20px;
+  padding: 8px 15px;
 }
 
-footer {
-  background-color: #0d47a1;
-  color: white;
-  padding: 15px 20px;
-  text-align: center;
+/* Хедер-контейнер */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* Логотип */
+.logo img {
+  height: 60px;
+}
+
+/* Телефоны */
+.phone-header {
+  text-align: right;
+}
+
+.phone-header a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+  margin: 2px 0;
+  font-weight: 600;
+}
+
+/* Меню */
 nav {
   background-color: #1565c0;
-  text-align: center;
   padding: 10px;
+  text-align: center;
 }
 
-nav a {
+nav ul.main-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul.main-menu li {
+  margin: 0 10px;
+  position: relative;
+}
+
+nav ul.main-menu a {
   color: white;
-  margin: 0 15px;
-  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
   font-weight: bold;
 }
 
+nav ul.main-menu a:hover {
+  background-color: #0b3c9e;
+  border-radius: 4px;
+}
+
+/* Выпадающее меню */
+.submenu:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  padding: 10px 0;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.dropdown li {
+  margin: 0;
+}
+
+.dropdown a {
+  color: #0d47a1;
+  padding: 8px 16px;
+}
+
+.dropdown a:hover {
+  background-color: #eee;
+}
+
+/* Контент */
 main {
   padding: 20px;
   max-width: 900px;
@@ -60,183 +135,70 @@ main {
   color: white;
 }
 
-/* АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ И ПЛАНШЕТОВ */
+/* Футер */
+footer {
+  background-color: #0d47a1;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+/* Мобильная версия */
 @media (max-width: 768px) {
-  nav {
-    padding: 5px;
-  }
-
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-
-  main {
+  header {
     padding: 10px;
   }
 
-  header, footer {
-    padding: 10px 10px;
-    font-size: 16px;
-  }
-
-  body {
-    font-size: 16px;
-  }
-}
-
-/* --- СТИЛИ ДЛЯ ШАПКИ С ТЕЛЕФОНАМИ --- */
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.logo h1 {
-  margin: 0;
-  font-size: 20px;
-  text-align: left;
-}
-
-.phone-header {
-  text-align: right;
-}
-
-.phone-header a {
-  color: #fff;
-  font-size: 16px;
-  text-decoration: none;
-  display: block;
-  margin: 2px 0;
-  font-weight: 500;
-}
-
-/* АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ И ПЛАНШЕТОВ */
-@media (max-width: 768px) {
-  nav {
-    padding: 5px;
-  }
-
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-
-  main {
-    padding: 10px;
-  }
-
-  header, footer {
-    padding: 15px 10px;
-    font-size: 16px;
-  }
-
-  body {
-    font-size: 16px;
-  }
-}
-/* --- СТИЛИ ДЛЯ ШАПКИ С ТЕЛЕФОНАМИ --- */
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.logo h1 {
-  margin: 0;
-  font-size: 24px;
-}
-
-.phone-header {
-  text-align: right;
-}
-
-.phone-header a {
-  color: #fff;
-  font-size: 16px;
-  text-decoration: none;
-  display: block;
-  margin: 2px 0;
-  font-weight: 500;
-}
-
-/* --- Адаптация для мобильных --- */
-@media (max-width: 768px) {
   .header-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .logo h1 {
-    font-size: 20px;
-  }
-
-  .phone-header {
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .phone-header a {
-    font-size: 16px;
-  }
-}
-.hamburger {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-  padding: 10px;
-}
-
-#navMenu {
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .header-container {
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   .logo {
-    flex: 1;
-    text-align: left;
+    flex: 1 1 50%;
   }
 
   .phone-header {
-    flex: 1;
+    flex: 1 1 50%;
     text-align: right;
-    font-size: 14px;
   }
 
-  .hamburger {
-    display: block;
-  }
-
-  nav {
-    width: 100%;
-  }
-
-  #navMenu ul {
+  nav ul.main-menu {
+    display: none;
     flex-direction: column;
     align-items: center;
     background-color: #1565c0;
-    padding: 10px 0;
   }
 
-  #navMenu ul li {
-    margin: 5px 0;
+  nav ul.main-menu.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #1565c0;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  nav ul.main-menu li {
+    margin: 6px 0;
+  }
+
+  .dropdown {
+    position: static;
+    box-shadow: none;
+    background-color: #fff;
+  }
+
+  .dropdown a {
+    color: #0d47a1;
   }
 }
-
-
