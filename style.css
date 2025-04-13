@@ -114,25 +114,27 @@ main {
   font-weight: 500;
 }
 
-/* --- Адаптация для мобильных --- */
+/* АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ И ПЛАНШЕТОВ */
 @media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  nav {
+    padding: 5px;
   }
 
-  .logo h1 {
-    font-size: 18px;
-    text-align: center;
+  nav a {
+    display: block;
+    margin: 10px 0;
   }
 
-  .phone-header {
-    text-align: center;
-    margin-top: 10px;
+  main {
+    padding: 10px;
   }
 
-  .phone-header a {
+  header, footer {
+    padding: 15px 10px;
+    font-size: 16px;
+  }
+
+  body {
     font-size: 16px;
   }
 }
