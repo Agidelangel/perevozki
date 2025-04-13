@@ -84,7 +84,7 @@ nav ul.main-menu li {
 }
 
 nav ul.main-menu a {
-  color: white;
+  color: white !important;
   padding: 8px 12px;
   display: block;
   font-weight: bold;
