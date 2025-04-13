@@ -17,33 +17,70 @@
 </head>
 
 <body>
- <header class="site-header">
-  <div class="container">
+ <header>
+  <div class="header-container">
+    <!-- ЛОГОТИП -->
     <div class="logo">
-      <a href="/">
-        <img src="logo.png" alt="Перевозки Днепр" />
+      <a href="index.html">
+        <img src="logo.png" alt="Perevozki">
       </a>
     </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#">Услуги</a></li>
-        <li><a href="#">Цены</a></li>
-        <li><a href="#">Транспорт</a></li>
-        <li><a href="#">Контакты</a></li>
-        <li><a href="#">О нас</a></li>
-        <li><a href="#">Статьи</a></li>
-      </ul>
-    </nav>
-    <div class="header-contacts">
-      <a href="tel:+380965387558">+38 (096) 538 75 58</a>
-      <a href="tel:+380953275120">+38 (095) 327 51 20</a>
-      <span>Пн–Вс 08:00–21:00</span>
+
+    <!-- ТЕЛЕФОНЫ -->
+    <div class="phone-header">
+      <a href="tel:+380965387558">📞 +38 (096) 538 75 58</a>
+      <a href="tel:+380953275120">📞 +38 (095) 327 51 20</a>
     </div>
-    <div class="header-cta">
-      <a href="#" class="btn">Онлайн заказ</a>
-    </div>
+
+    <!-- ГАМБУРГЕР -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   </div>
+
+  <!-- ГЛАВНОЕ МЕНЮ -->
+  <nav>
+    <ul class="main-menu" id="mainMenu">
+      <li><a href="index.html">Главная</a></li>
+      <li class="submenu">
+        <a href="uslugi.html">Услуги ▾</a>
+        <ul class="dropdown">
+          <li><strong><a href="perevozki-dnepr.html">Грузоперевозки</a></strong></li>
+          <li><a href="mezhgorod.html">Междугородние</a></li>
+          <li><a href="gruzovoe-taksi.html">Грузовое такси</a></li>
+          <li><a href="stroymaterialy.html">Стройматериалы</a></li>
+          <li><a href="oborudovanie.html">Оборудование</a></li>
+          <li><a href="spectransport.html">Спецтранспорт</a></li>
+          <li><strong><a href="pereezdy.html">Переезды</a></strong></li>
+          <li><a href="kvartira.html">Квартирный</a></li>
+          <li><a href="dacha.html">Дачный</a></li>
+          <li><a href="ofisnyy-pereezd.html">Офисный</a></li>
+          <li><a href="bank.html">Отделения банков</a></li>
+          <li><a href="kafe-restoran.html">Кафе и рестораны</a></li>
+          <li><strong><a href="servis.html">Сервис</a></strong></li>
+          <li><a href="gruzchiki.html">Грузчики</a></li>
+          <li><a href="pogruzchik.html">Погрузчик</a></li>
+          <li><a href="evakuator.html">Эвакуатор</a></li>
+          <li><a href="musor.html">Вывоз мусора</a></li>
+          <li><strong><a href="dostavka.html">Доставка</a></strong></li>
+          <li><a href="tovary.html">Товары</a></li>
+          <li><a href="gipermarket.html">Из гипермаркетов</a></li>
+          <li><a href="produkty.html">Продукты</a></li>
+          <li><a href="kurier.html">Курьерская</a></li>
+          <li><strong><a href="passazhirskie.html">Пассажирские</a></strong></li>
+          <li><a href="passazhirskie.html">Пассажирские перевозки</a></li>
+          <li><a href="family.html">Семейные поездки</a></li>
+          <li><a href="pets.html">Перевозка животных</a></li>
+          <li><a href="transfer.html">Частный трансфер</a></li>
+        </ul>
+      </li>
+      <li><a href="ceny.html">Цены</a></li>
+      <li><a href="transport.html">Транспорт</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="about.html">О нас</a></li>
+      <li><a href="articles.html">Статьи</a></li>
+    </ul>
+  </nav>
 </header>
+
   
 
 
