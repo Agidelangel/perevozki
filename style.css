@@ -48,3 +48,28 @@ nav a {
 main {
   padding: 20px;
 }
+
+/* АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ И ПЛАНШЕТОВ */
+@media (max-width: 768px) {
+  nav {
+    padding: 5px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  header, footer {
+    padding: 15px 10px;
+    font-size: 16px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+}
