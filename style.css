@@ -1,191 +1,28 @@
-/* Общий CSS */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 18px;
-  background: url("background.jpg.webp") no-repeat center center fixed;
-  background-size: cover;
+  color: #333;
+  background-color: #f5f7fa;
 }
-
-body:not(.home)::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(8px);
-  background-color: rgba(255,255,255,0.6);
-  z-index: 0;
-}
-
-header, nav, main, footer {
-  position: relative;
-  z-index: 1;
-}
-
-header {
+header, footer {
   background-color: #0d47a1;
   color: white;
-  padding: 10px 20px;
+  padding: 20px;
+  text-align: center;
 }
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.logo h1 {
-  margin: 0;
-  font-size: 22px;
-}
-
-.logo p {
-  margin: 0;
-  font-size: 14px;
-  color: #ddd;
-}
-
-.phone-header {
-  text-align: right;
-}
-
-.phone-header a {
-  color: #fff;
-  font-size: 16px;
-  text-decoration: none;
-  display: block;
-  margin: 2px 0;
-  font-weight: 500;
-}
-
 nav {
   background-color: #1565c0;
   text-align: center;
   padding: 10px;
 }
-
-nav ul.main-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-nav ul.main-menu > li {
-  position: relative;
-  margin: 0 10px;
-}
-
-nav ul.main-menu a {
+nav a {
   color: white;
-  padding: 8px 12px;
-  display: block;
-}
-
-nav ul.main-menu a:hover {
-  background-color: #0b3c9e;
-  border-radius: 4px;
-}
-
-.submenu:hover .dropdown {
-  display: block;
-}
-
-.dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  padding: 10px 0;
-  min-width: 200px;
-  z-index: 1000;
-}
-
-.dropdown li {
-  margin: 0;
-}
-
-.dropdown a {
-  color: #0d47a1;
-  padding: 8px 16px;
-}
-
-.dropdown a:hover {
-  background-color: #eee;
-}
-
-main {
-  padding: 30px;
-  max-width: 1000px;
-  margin: auto;
-  background-color: rgba(255,255,255,0.9);
-  color: #222;
-  border-radius: 10px;
-}
-
-footer {
-  background-color: #0d47a1;
-  color: white;
-  padding: 15px 20px;
-  text-align: center;
-  font-size: 14px;
-  margin-top: 40px;
-}
-
-.hero {
-  padding: 120px 20px 60px;
-  text-align: center;
-  color: white;
-  background: transparent;
-  text-shadow: 1px 1px 3px #000;
-}
-
-.hero-content h1 {
-  font-size: 32px;
-}
-
-.hero-content p {
-  font-size: 18px;
-  margin: 10px 0 20px;
-}
-
-.hero-content .btn {
-  background-color: #ffcc00;
-  padding: 10px 20px;
+  margin: 0 15px;
   text-decoration: none;
-  color: black;
   font-weight: bold;
-  border-radius: 5px;
 }
-
-@media (max-width: 768px) {
-  .hero {
-    padding-top: 180px !important;
-  }
-
-  .header-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .phone-header a {
-    font-size: 18px;
-  }
-
-  .main-menu {
-    flex-direction: column;
-  }
-
-  .dropdown {
-    position: static;
-  }
+main {
+  padding: 20px;
 }
