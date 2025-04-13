@@ -47,3 +47,19 @@ nav a {
 main {
   padding: 20px;
 }
+
+/* плавающий номер телефона */
+.call-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0d47a1;
+  color: white;
+  font-size: 24px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
