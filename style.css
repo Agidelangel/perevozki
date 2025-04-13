@@ -1,12 +1,11 @@
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #fff;
   background: url("background.jpg.webp") no-repeat center center;
-background-size: cover;
-background-attachment: scroll;
+  background-size: cover;
+  background-attachment: scroll;
 }
 
 /* Стиль полупрозрачного тумана — добавляется на всех страницах кроме index.html */
@@ -26,10 +25,16 @@ header, nav, main, footer {
   z-index: 1;
 }
 
-header, footer {
+header {
   background-color: #0d47a1;
   color: white;
-  padding: 20px;
+  padding: 10px 20px;
+}
+
+footer {
+  background-color: #0d47a1;
+  color: white;
+  padding: 15px 20px;
   text-align: center;
 }
 
@@ -48,32 +53,13 @@ nav a {
 
 main {
   padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  color: white;
 }
 
-/* АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ И ПЛАНШЕТОВ */
-@media (max-width: 768px) {
-  nav {
-    padding: 5px;
-  }
-
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-
-  main {
-    padding: 10px;
-  }
-
-  header, footer {
-    padding: 15px 10px;
-    font-size: 16px;
-  }
-
-  body {
-    font-size: 16px;
-  }
-}
 /* --- СТИЛИ ДЛЯ ШАПКИ С ТЕЛЕФОНАМИ --- */
 .header-container {
   display: flex;
@@ -86,7 +72,14 @@ main {
 
 .logo h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 22px;
+  text-align: left;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 14px;
+  color: #ddd;
 }
 
 .phone-header {
@@ -102,25 +95,55 @@ main {
   font-weight: 500;
 }
 
-/* --- Адаптация для мобильных --- */
+/* --- АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ --- */
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 5px 15px;
   }
 
   .logo h1 {
-    font-size: 20px;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  .logo p {
+    font-size: 13px;
+    margin-bottom: 8px;
   }
 
   .phone-header {
     text-align: center;
-    margin-top: 10px;
+    margin: 0 0 10px;
   }
 
   .phone-header a {
+    font-size: 18px;
+    margin: 3px 0;
+  }
+
+  nav {
+    padding: 5px;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  header, footer {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  body {
     font-size: 16px;
   }
 }
-
