@@ -64,7 +64,7 @@ main {
 }
 
 .logo img {
-  max-height: 60px; /* ✅ Ограничение высоты */
+  max-height: 100px; /* ✅ Ограничение высоты */
   width: auto;
   display: block;
   margin: 0 auto; /* Центрирует логотип */
