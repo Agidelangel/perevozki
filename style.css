@@ -92,16 +92,11 @@ main {
   }
 }
 
-/* Мобильная */
-@media (max-width: 768px) {
-  .logo {
-    text-align: left;
-  }
-}
+/* 📱 Мобильная версия */
 @media (max-width: 768px) {
   .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Лого слева, гамбургер по центру, телефоны справа */
     align-items: center;
     padding: 8px 10px;
   }
@@ -112,13 +107,14 @@ main {
   }
 
   .menu-toggle {
+    flex: 1;
+    text-align: center;
     display: block;
-    font-size: 36px;
     background: none;
     border: none;
+    font-size: 26px;
     color: white;
     cursor: pointer;
-    margin: 0 auto;
   }
 
   .phones {
@@ -128,7 +124,7 @@ main {
   }
 
   nav {
-    display: none;
+    display: none; /* Скрыто до нажатия */
     flex-direction: column;
     background-color: #1565c0;
     padding: 10px;
@@ -136,15 +132,14 @@ main {
   }
 
   nav.active {
-    display: flex;
+    display: flex; /* Показывается при нажатии на гамбургер */
   }
 
   nav a {
-    color: white;
-    padding: 8px 0;
     display: block;
+    padding: 8px 0;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
   }
 }
-
-
-
