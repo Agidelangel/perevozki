@@ -95,7 +95,7 @@ main {
 /* Мобильная */
 @media (max-width: 768px) {
   .logo {
-    text-align: center;
+    text-align: left;
     margin: 0 auto;
   }
 }
