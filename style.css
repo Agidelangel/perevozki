@@ -96,9 +96,9 @@ main {
 @media (max-width: 768px) {
   .header-container {
     display: flex;
-    justify-content: space-between; /* Лого слева, гамбургер по центру, телефоны справа */
+    justify-content: space-between;
     align-items: center;
-    padding: 8px 10px;
+    padding: 6px 10px;
   }
 
   .logo {
@@ -107,12 +107,10 @@ main {
   }
 
   .menu-toggle {
-    flex: 1;
-    text-align: center;
-    display: block;
+    flex: 0;
+    font-size: 26px;
     background: none;
     border: none;
-    font-size: 26px;
     color: white;
     cursor: pointer;
   }
@@ -124,7 +122,7 @@ main {
   }
 
   nav {
-    display: none; /* Скрыто до нажатия */
+    display: none;
     flex-direction: column;
     background-color: #1565c0;
     padding: 10px;
@@ -132,14 +130,12 @@ main {
   }
 
   nav.active {
-    display: flex; /* Показывается при нажатии на гамбургер */
+    display: flex;
   }
 
   nav a {
-    display: block;
-    padding: 8px 0;
     color: white;
-    text-decoration: none;
-    font-weight: bold;
+    padding: 8px 0;
+    display: block;
   }
 }
