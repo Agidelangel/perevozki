@@ -94,11 +94,17 @@ main {
 
 /* Мобильная */
 @media (max-width: 768px) {
+  .logo {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
   .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 10px;
+    padding: 8px 10px;
   }
 
   .logo {
@@ -107,14 +113,13 @@ main {
   }
 
   .menu-toggle {
-    flex: 0 0 auto;
-    order: 2;
+    display: block;
+    font-size: 26px;
     background: none;
     border: none;
-    font-size: 26px;
     color: white;
     cursor: pointer;
-    margin: 0 10px;
+    margin: 0 auto;
   }
 
   .phones {
@@ -127,9 +132,8 @@ main {
     display: none;
     flex-direction: column;
     background-color: #1565c0;
-    padding: 10px 0;
+    padding: 10px;
     text-align: center;
-    width: 100%;
   }
 
   nav.active {
@@ -140,18 +144,8 @@ main {
     color: white;
     padding: 8px 0;
     display: block;
-    font-weight: bold;
-  }
-
-  .logo img {
-    max-height: 60px;
-  }
-
-  .logo span {
-    font-size: 12px;
   }
 }
-
 
 
 
